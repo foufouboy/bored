@@ -19,25 +19,19 @@ function App() {
 					</a>
 				</div>
 				<nav className="hidden md:flex font-game grow justify-between">
-					<ul className="flex w-full justify-center gap-[20%] pr-5">
-						<li>
-							<GameyButton>Home</GameyButton>
+					<ul className="flex w-full justify-center gap-[15%] pr-5">
+						<li className="text-[#60cfee] drop-shadow-[1px_1px_black] hover:underline decoration-2 cursor-pointer">
+							<a href="#">Home</a>
 						</li>
-						<li>
-							<GameyButton>Coin</GameyButton>
+						<li className="text-[#e0ad12] drop-shadow-[1px_1px_black] hover:underline decoration-2 cursor-pointer">
+							<a href="#">Coin</a>
 						</li>
-						<li>
-							<GameyButton>Enter</GameyButton>
+						<li className="text-[#0abb97] drop-shadow-[1px_1px_black] hover:underline decoration-2 cursor-pointer">
+							<a href="#">Enter</a>
 						</li>
 					</ul>
 				</nav>
-				<GameyButton
-					color="black"
-					reverseColor="white"
-					classes="md:hidden"
-				>
-					Menu
-				</GameyButton>
+				<GameyButton classes="md:hidden">Menu</GameyButton>
 			</header>
 			<main></main>
 		</>
