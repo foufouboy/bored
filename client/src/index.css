@@ -1,22 +1,82 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Press+Start+2P&display=swap");
+@import url("./styles/csshake-default.min.css");
 
 @import "tailwindcss";
 
+@layer utilities {
+	.inverted-radius::after {
+		content: "";
+		position: absolute;
+		left: 100%;
+		bottom: 0;
+		width: 20px;
+		height: 20px;
+		background: transparent;
+		border-bottom-left-radius: 15px;
+		box-shadow: -10px 0 0 0 #ebefff;
+	}
+
+	.inverted-radius::before {
+		content: "";
+		position: absolute;
+		right: 100%;
+		bottom: 0;
+		width: 20px;
+		height: 20px;
+		background: transparent;
+		border-bottom-right-radius: 15px;
+		box-shadow: 10px 0 0 0 #ebefff; /* This is where the magic happens! */
+	}
+
+	.inverted-radius.raichu::before {
+		box-shadow: -10px 0 0 white;
+	}
+
+	.inverted-radius.raichu::after {
+		box-shadow: -10px 0 0 0 white;
+	}
+
+	.inverted-radius.snorlax::after {
+		display: none;
+	}
+
+	.inverted-radius.snorlax::before {
+		top: 0;
+		left: -30px;
+		width: 30px;
+		box-shadow: 18px 0 0 0 white;
+		background: transparent;
+		border-radius: 0;
+		border-top-right-radius: 15px;
+	}
+}
+
+@utility grid-auto-fill {
+	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
+@utility linear-text-gradient {
+	background: linear-gradient(45deg, orange 40%, skyblue 55%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
 @theme {
-	--font-display: "Roboto";
+	--font-display: "Funnel Display";
 	--font-game: "Press Start 2P";
 }
 
 body {
-	background: #e8e8e8;
+	background: linear-gradient(45deg, #eede7a, #8adef5);
 	display: flex;
 	justify-content: center;
 }
 
 #root {
 	min-height: 100vh;
-	max-width: 1400px;
+	max-width: 1500px;
 	padding: 23px;
 	flex-grow: 1;
 }

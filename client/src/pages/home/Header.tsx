@@ -3,22 +3,22 @@ import Logo from "../../assets/logo.png";
 import { useState } from "react";
 
 function Header() {
-	const [sideNavActive, setSideNavActive] = useState(true);
+	const [sideNavActive, setSideNavActive] = useState(false);
 
 	const switchSideNav = () => {
 		setSideNavActive(!sideNavActive);
 	};
 
 	return (
-		<header className="flex relative font-game p-5 justify-between rounded-md items-center">
+		<header className="flex relative font-game p-5 px-7 justify-between rounded-md items-center">
 			<div className="title">
 				<a href="/" className="flex items-center gap-3">
 					<img
 						src={Logo}
 						alt="A boring logo"
-						className="w-[3.5rem] sm:w-[3rem]"
+						className="w-[3.5rem] sm:w-[3rem] hidden sm:block"
 					/>
-					<h1 className="font-game text-2xl hidden sm:block after:content-['(like,_really.)'] after:text-slate-400 after:block after:text-[.6rem]">
+					<h1 className="font-game text-2xl sm:block after:content-['(like,_really.)'] after:text-slate-400 after:block after:text-[.6rem]">
 						Bored
 					</h1>
 				</a>
@@ -26,13 +26,13 @@ function Header() {
 			<nav className="hidden md:flex grow justify-between">
 				<ul className="flex w-full justify-center gap-[15%] pr-5">
 					<li className="text-[#60cfee] drop-shadow-[1px_1px_black] hover:underline decoration-2 cursor-pointer">
-						<a href="#">Home</a>
+						<a href="#">Blog</a>
 					</li>
 					<li className="text-[#e0ad12] drop-shadow-[1px_1px_black] hover:underline decoration-2 cursor-pointer">
-						<a href="#">Coin</a>
+						<a href="#">Enter</a>
 					</li>
 					<li className="text-[#0abb97] drop-shadow-[1px_1px_black] hover:underline decoration-2 cursor-pointer">
-						<a href="#">Enter</a>
+						<a href="#">About</a>
 					</li>
 				</ul>
 			</nav>
@@ -40,7 +40,7 @@ function Header() {
 				Menu
 			</GameyButton>
 			<nav
-				className={`ease-in md:hidden side-nav top-full right-0 w-full absolute max-w-[800px] ${
+				className={`ease-in md:hidden z-10 side-nav top-full right-0 w-full absolute max-w-[800px] ${
 					sideNavActive ? "" : "pointer-events-none"
 				}`}
 			>
