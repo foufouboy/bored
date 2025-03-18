@@ -7,8 +7,8 @@ function Main() {
 		<main className="sm:p-10 p-8 font-display font-[400] text-[1.1rem] text-slate-800">
 			<div className="pokemon-sections grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
 				<section className="flex flex-col rounded-b-xl overflow-hidden">
-					<div className="bg-[#EBEFFF] puzzle-piece h-[5rem] w-[10rem] self-center rounded-t-xl relative inverted-radius z-0"></div>
-					<div className="bg-[#EBEFFF] rounded-xl">
+					<div className="bg-[#b5c4fa] puzzle-piece h-[5rem] w-[10rem] self-center rounded-t-xl relative inverted-radius z-0"></div>
+					<div className="bg-[#b5c4fa] rounded-xl">
 						<img
 							src={Gyarados}
 							alt="Gyaaaarados"
@@ -46,7 +46,7 @@ function Main() {
 					</div>
 					<div className="bg-white puzzle-piece h-[5rem] w-[13rem] self-center rounded-tr-xl relative inverted-radius raichu z-0"></div>
 				</section>
-				<section className="bg-[#ffd1b2] rounded-xl flex flex-col md:col-span-2 xl:col-span-1 overflow-hidden">
+				<section className="bg-[#f0b38a] rounded-xl flex flex-col md:col-span-2 xl:col-span-1 overflow-hidden">
 					<div className="puzzle-piece h-[5rem] w-[10rem] self-end rounded-xl rounded-br-none relative z-0 bg-white inverted-radius snorlax"></div>
 					<div className="rounded-xl shadow-[10px_0_0_white] flex flex-col">
 						<img

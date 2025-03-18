@@ -14,7 +14,7 @@
 		height: 20px;
 		background: transparent;
 		border-bottom-left-radius: 15px;
-		box-shadow: -10px 0 0 0 #ebefff;
+		box-shadow: -10px 0 0 0 #b5c4fa;
 	}
 
 	.inverted-radius::before {
@@ -26,7 +26,7 @@
 		height: 20px;
 		background: transparent;
 		border-bottom-right-radius: 15px;
-		box-shadow: 10px 0 0 0 #ebefff; /* This is where the magic happens! */
+		box-shadow: 10px 0 0 0 #b5c4fa; /* This is where the magic happens! */
 	}
 
 	.inverted-radius.raichu::before {
