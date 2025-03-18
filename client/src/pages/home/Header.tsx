@@ -40,7 +40,7 @@ function Header() {
 				Menu
 			</GameyButton>
 			<nav
-				className={`ease-in md:hidden z-10 side-nav top-full right-0 w-full absolute max-w-[800px] ${
+				className={`ease-in md:hidden z-20 side-nav top-full right-0 w-full absolute max-w-[800px] ${
 					sideNavActive ? "" : "pointer-events-none"
 				}`}
 			>

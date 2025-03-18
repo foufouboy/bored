@@ -6,6 +6,13 @@ import { useState } from "react";
 function Welcome() {
 	const [timesClicked, setTimesClicked] = useState(0);
 
+	const uselessButtonMessages = [
+		"Smatch that button!!!",
+		"Nothing happenned???",
+		"Oh yeah that's normal.",
+		"But anyway...",
+	];
+
 	const incrementTimesClicked = () => {
 		setTimesClicked(timesClicked + 1);
 	};
@@ -23,7 +30,7 @@ function Welcome() {
 				Your browser does not support the video tag
 			</video>
 			<div className="flex flex-col  m-auto items-center text-center z-10">
-				<h2 className="mb-6 lg:text-4xl md:text-3xl text-2xl md:drop-shadow-[0_4px_0_black] drop-shadow-[0_3px_0_black] linear-text-gradient w-[70%]">
+				<h2 className="mb-6 lg:text-4xl md:text-3xl text-xl md:drop-shadow-[0_4px_0_black] drop-shadow-[0_3px_0_black] linear-text-gradient w-[70%]">
 					Welcome to my totally boring website !
 				</h2>
 				<p className="text-xs w-[70%] text-white mb-2 drop-shadow-[0_3px_0_black]">
@@ -31,8 +38,11 @@ function Welcome() {
 					<br /> I work on it on my free time. Because I have a lot.
 					Because I don't have a job <br /> *wink*
 				</p>
-				<GameyButton classes="mt-5 bg-sky-400 opacity-90 shake py-3 md:text-base text-sm">
-					Smatch that button!!!
+				<GameyButton
+					onClick={incrementTimesClicked}
+					classes="mt-5 bg-sky-400 opacity-90 shake py-3 md:text-base text-sm"
+				>
+					{uselessButtonMessages[timesClicked % 4]}
 				</GameyButton>
 			</div>
 		</section>
